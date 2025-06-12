@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изпращане на пратка - BlueSpeed</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/send.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">BlueSpeed</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Начало</a></li>
+                    <li><a href="index.html#services">Услуги</a></li>
+                    <li><a href="index.html#about">За нас</a></li>
+                    <li><a href="index.html#contact">Контакти</a></li>
+                    <li><a href="#" class="btn-login">Вход</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="send-page">
+        <section class="send-section">
+            <div class="send-container">
+                <div class="send-header">
+                    <h1>Изпращане на пратка</h1>
+                    <p>Попълнете формата по-долу, за да изпратите вашата пратка</p>
+                </div>
+                
+                <form id="sendForm" class="send-form">
+                    <div class="form-section">
+                        <div class="section-header">
+                            <i class="fas fa-user"></i>
+                            <h2>Данни за изпращача</h2>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="senderName">Име на изпращача</label>
+                                <div class="input-group">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="senderName" name="senderName" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="senderPhone">Телефон</label>
+                                <div class="input-group">
+                                    <i class="fas fa-phone"></i>
+                                    <input type="tel" id="senderPhone" name="senderPhone" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="senderAddress">Адрес</label>
+                                <div class="input-group">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <textarea id="senderAddress" name="senderAddress" class="form-control" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <div class="section-header">
+                            <i class="fas fa-user-friends"></i>
+                            <h2>Данни за получателя</h2>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="receiverName">Име на получателя</label>
+                                <div class="input-group">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="receiverName" name="receiverName" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="receiverPhone">Телефон</label>
+                                <div class="input-group">
+                                    <i class="fas fa-phone"></i>
+                                    <input type="tel" id="receiverPhone" name="receiverPhone" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="receiverAddress">Адрес</label>
+                                <div class="input-group">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <textarea id="receiverAddress" name="receiverAddress" class="form-control" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <div class="section-header">
+                            <i class="fas fa-box"></i>
+                            <h2>Детайли за пратката</h2>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="packageType">Тип на пратката</label>
+                                <div class="input-group">
+                                    <i class="fas fa-box"></i>
+                                    <select id="packageType" name="packageType" class="form-control" required>
+                                        <option value="">Изберете тип</option>
+                                        <option value="document">Документи</option>
+                                        <option value="small">Малка пратка</option>
+                                        <option value="medium">Средна пратка</option>
+                                        <option value="large">Голяма пратка</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="packageWeight">Тегло (кг)</label>
+                                <div class="input-group">
+                                    <i class="fas fa-weight-hanging"></i>
+                                    <input type="number" id="packageWeight" name="packageWeight" class="form-control" min="0.1" step="0.1" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="serviceType">Тип услуга</label>
+                                <div class="input-group">
+                                    <i class="fas fa-truck"></i>
+                                    <select id="serviceType" name="serviceType" class="form-control" required>
+                                        <option value="">Изберете услуга</option>
+                                        <option value="standard">Стандартна</option>
+                                        <option value="express">Експрес</option>
+                                        <option value="priority">Приоритетна</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="cashOnDelivery" name="cashOnDelivery" class="custom-checkbox">
+                                    <label for="cashOnDelivery">Наложен платеж</label>
+                                </div>
+                                <div class="input-group" id="codAmountGroup" style="display: none;">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <input type="number" id="codAmount" name="codAmount" class="form-control" min="0" step="0.01" placeholder="Сума за наложен платеж (лв.)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <div class="section-header">
+                            <i class="fas fa-cog"></i>
+                            <h2>Допълнителни опции</h2>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="fragile" name="fragile" class="custom-checkbox">
+                                    <label for="fragile">Чуплива пратка</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="insurance" name="insurance" class="custom-checkbox">
+                                    <label for="insurance">Застраховка</label>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="notes">Бележки</label>
+                                <div class="input-group">
+                                    <i class="fas fa-sticky-note"></i>
+                                    <textarea id="notes" name="notes" class="form-control" placeholder="Добавете допълнителна информация за пратката..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-button">
+                            <i class="fas fa-paper-plane"></i>
+                            Изпрати пратка
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакти</h3>
+                    <p><i class="fas fa-phone"></i> +359 888 123 456</p>
+                    <p><i class="fas fa-envelope"></i> info@bluespeed.bg</p>
+                    <p><i class="fas fa-map-marker-alt"></i> ул. "Примерна" 123, София</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Последвайте ни</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Полезни връзки</h3>
+                    <ul>
+                        <li><a href="#">Условия за ползване</a></li>
+                        <li><a href="#">Политика за поверителност</a></li>
+                        <li><a href="#">Често задавани въпроси</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BlueSpeed. Всички права запазени.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/send.js"></script>
+</body>
+</html> 

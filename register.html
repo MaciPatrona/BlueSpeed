@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - BlueSpeed</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">BlueSpeed</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Начало</a></li>
+                    <li><a href="index.html#services">Услуги</a></li>
+                    <li><a href="index.html#about">За нас</a></li>
+                    <li><a href="index.html#contact">Контакти</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="register-page">
+        <section class="register-section">
+            <div class="register-container">
+                <div class="register-header">
+                    <h1>Създаване на акаунт</h1>
+                    <p>Регистрирайте се, за да използвате нашите услуги</p>
+                </div>
+
+                <form id="registerForm" class="register-form">
+                    <div class="form-section">
+                        <div class="section-header">
+                            <i class="fas fa-user"></i>
+                            <h2>Лични данни</h2>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="firstName">Име</label>
+                                <div class="input-group">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="firstName" name="firstName" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Фамилия</label>
+                                <div class="input-group">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="lastName" name="lastName" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Имейл</label>
+                                <div class="input-group">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" id="email" name="email" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Телефон</label>
+                                <div class="input-group">
+                                    <i class="fas fa-phone"></i>
+                                    <input type="tel" id="phone" name="phone" class="form-control" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <div class="section-header">
+                            <i class="fas fa-lock"></i>
+                            <h2>Парола</h2>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="password">Парола</label>
+                                <div class="input-group">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="password" name="password" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Потвърди парола</label>
+                                <div class="input-group">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <div class="section-header">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h2>Адрес</h2>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="address">Адрес</label>
+                                <div class="input-group">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <textarea id="address" name="address" class="form-control" required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">Град</label>
+                                <div class="input-group">
+                                    <i class="fas fa-city"></i>
+                                    <input type="text" id="city" name="city" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="postalCode">Пощенски код</label>
+                                <div class="input-group">
+                                    <i class="fas fa-mail-bulk"></i>
+                                    <input type="text" id="postalCode" name="postalCode" class="form-control" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <div class="terms-checkbox">
+                            <input type="checkbox" id="terms" name="terms" class="custom-checkbox" required>
+                            <label for="terms">Съгласен съм с <a href="#">Условията за ползване</a> и <a href="#">Политиката за поверителност</a></label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="register-button">
+                            <i class="fas fa-user-plus"></i>
+                            Регистрация
+                        </button>
+                    </div>
+
+                    <div class="divider">
+                        <span>или</span>
+                    </div>
+
+                    <div class="social-login">
+                        <button type="button" class="social-button google">
+                            <i class="fab fa-google"></i>
+                            Регистрация с Google
+                        </button>
+                        <button type="button" class="social-button facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            Регистрация с Facebook
+                        </button>
+                    </div>
+
+                    <div class="login-link">
+                        Вече имате акаунт? <a href="login.html">Влезте тук</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакти</h3>
+                    <p><i class="fas fa-phone"></i> +359 888 123 456</p>
+                    <p><i class="fas fa-envelope"></i> info@bluespeed.bg</p>
+                    <p><i class="fas fa-map-marker-alt"></i> ул. "Примерна" 123, София</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Последвайте ни</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Полезни връзки</h3>
+                    <ul>
+                        <li><a href="#">Условия за ползване</a></li>
+                        <li><a href="#">Политика за поверителност</a></li>
+                        <li><a href="#">Често задавани въпроси</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BlueSpeed. Всички права запазени.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/register.js"></script>
+</body>
+</html> 

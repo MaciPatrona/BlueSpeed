@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход - BlueSpeed</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">BlueSpeed</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Начало</a></li>
+                    <li><a href="index.html#services">Услуги</a></li>
+                    <li><a href="index.html#about">За нас</a></li>
+                    <li><a href="index.html#contact">Контакти</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="login-page">
+        <section class="login-section">
+            <div class="login-container">
+                <div class="login-header">
+                    <h1>Вход в системата</h1>
+                    <p>Влезте в своя акаунт, за да продължите</p>
+                </div>
+
+                <form id="loginForm" class="login-form">
+                    <div class="form-group">
+                        <label for="email">Имейл</label>
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Парола</label>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="password" name="password" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-options">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember" name="remember" class="custom-checkbox">
+                            <label for="remember">Запомни ме</label>
+                        </div>
+                        <a href="#" class="forgot-password">Забравена парола?</a>
+                    </div>
+
+                    <button type="submit" class="login-button">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Вход
+                    </button>
+
+                    <div class="divider">
+                        <span>или</span>
+                    </div>
+
+                    <div class="social-login">
+                        <button type="button" class="social-button google">
+                            <i class="fab fa-google"></i>
+                            Вход с Google
+                        </button>
+                        <button type="button" class="social-button facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            Вход с Facebook
+                        </button>
+                    </div>
+
+                    <div class="register-link">
+                        Нямате акаунт? <a href="register.html">Регистрирайте се</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакти</h3>
+                    <p><i class="fas fa-phone"></i> +359 888 123 456</p>
+                    <p><i class="fas fa-envelope"></i> info@bluespeed.bg</p>
+                    <p><i class="fas fa-map-marker-alt"></i> ул. "Примерна" 123, София</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Последвайте ни</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Полезни връзки</h3>
+                    <ul>
+                        <li><a href="#">Условия за ползване</a></li>
+                        <li><a href="#">Политика за поверителност</a></li>
+                        <li><a href="#">Често задавани въпроси</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BlueSpeed. Всички права запазени.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/login.js"></script>
+</body>
+</html> 

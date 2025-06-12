@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проследяване на пратка - BlueSpeed</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/track.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">BlueSpeed</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Начало</a></li>
+                    <li><a href="index.html#services">Услуги</a></li>
+                    <li><a href="index.html#about">За нас</a></li>
+                    <li><a href="index.html#contact">Контакти</a></li>
+                    <li><a href="#" class="btn-login">Вход</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="track-page">
+        <div class="container">
+            <section class="track-section">
+                <h1>Проследяване на пратка</h1>
+                <div class="track-container">
+                    <div class="track-form">
+                        <form id="trackingForm">
+                            <div class="form-group">
+                                <label for="trackingNumber">Номер на товарителница</label>
+                                <input type="text" id="trackingNumber" name="trackingNumber" required
+                                    placeholder="Въведете номера на товарителницата">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Проследи</button>
+                        </form>
+                    </div>
+                    <div class="track-result" id="trackResult">
+                        <div class="tracking-info">
+                            <div class="status-card">
+                                <h3>Статус на пратката</h3>
+                                <div class="status" id="packageStatus">
+                                    <i class="fas fa-box"></i>
+                                    <span>Въведете номер на товарителница</span>
+                                </div>
+                            </div>
+                            <div class="tracking-history">
+                                <h3>История на пратката</h3>
+                                <ul class="timeline" id="trackingHistory">
+                                    <!-- Tracking history will be populated by JavaScript -->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tracking-map" id="trackingMap">
+                            <!-- Map will be initialized by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакти</h3>
+                    <p><i class="fas fa-phone"></i> +359 888 123 456</p>
+                    <p><i class="fas fa-envelope"></i> info@bluespeed.bg</p>
+                    <p><i class="fas fa-map-marker-alt"></i> ул. "Примерна" 123, София</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Последвайте ни</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Полезни връзки</h3>
+                    <ul>
+                        <li><a href="#">Условия за ползване</a></li>
+                        <li><a href="#">Политика за поверителност</a></li>
+                        <li><a href="#">Често задавани въпроси</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BlueSpeed. Всички права запазени.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="scripts/track.js"></script>
+</body>
+</html> 
