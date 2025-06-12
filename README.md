@@ -1,6 +1,6 @@
 # 🚀 BlueSpeed - Куриерска система
 
-![BlueSpeed Logo](Screenshot 2025-06-12 034523.png)
+![BlueSpeed Logo](icon.png)
 
 ## 📝 Описание
 
